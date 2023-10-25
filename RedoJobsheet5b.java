@@ -2,25 +2,28 @@ import java.util.Scanner;
 public class RedoJobsheet5b {
     public static void main(String[] args) {
         
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        String dayName, dayType;
+        
+        System.out.print("Input day name: ");
+        dayName = sc.nextLine();
+        switch (dayName.toLowerCase()){
+            case "monday" :
+            case "tuesday" :
+            case "wednesday" :
+            case "thursday" :
+            case "friday" :
+                dayType = "weekday";
+                break;
+            case "saturday" :
+            case "sunday" :
+                dayType = "weekend";
+                break;
+            default:
+                dayType = "invalid day name";
+        }
 
-        int dayNumber;
-        String dayType;
-    
-        System.out.println("Type Daynumber");
-        dayNumber = input.nextInt();
-
-         if (dayNumber <= 6){
-        dayType = "Weekday";
-         }
-        else if (dayNumber > 6 && dayNumber <= 7){
-        dayType = "Weekend";
-         }  
-        else{
-        dayType = "Invalid day number";
-        }  
-
-        System.out.println(dayType);
+        System.out.println(dayName + " is a " + dayType);
 
     }
 }
