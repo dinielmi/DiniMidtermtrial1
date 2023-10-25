@@ -8,7 +8,7 @@ public class RedoJobsheet3a {
     long saldo = 150000000;
     int angkaDesimal = 0x10;
 
-    System.out.println("Golongan darat\t: " + (byte)golonganDarah);
+    System.out.println("Golongan darah\t: " + (byte)golonganDarah);
     System.out.println("Jumlah Penduduk\t: " + jumlahPenduduk);
     System.out.println("Suhu\t\t: " + suhu);
     System.out.println("Berat\t\t: " + (float)berat);
